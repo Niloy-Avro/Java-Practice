@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class A {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Entetr the size if an array: ");
+        int s = in.nextInt();
+        int[] arr = new int[s];
+        System.out.println("Enter the elments: ");
+        for(int i=0;i<s;i++) {
+            arr[i] = in.nextInt();
+        }
+        System.out.println("Enter start index: ");
+        int a=in.nextInt();
+        System.out.println("Enter end index: ");
+        int b=in.nextInt();
+
+        swap(arr,a,b);
+        System.out.println("After swap: ");
+        System.out.println(Arrays.toString(arr));
+    }
+    static void swap(int[] arr, int s, int e) {
+            int temp=arr[s];
+            arr[s]=arr[e];
+            arr[e]=temp; 
+    }
+}
