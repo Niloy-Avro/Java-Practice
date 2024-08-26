@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Collections;
+
+class A {
+    public static void main(String[] args) {
+        ArrayList<String> cars = new ArrayList<>();
+        cars.add("Alto");
+        cars.add("Jaguar");
+        cars.add("BMW");
+        cars.add("Bugatti");
+      //method1 to print elements
+        for(String i: cars) {
+            System.out.println(i+" ");
+        }
+      
+      //method2 to print elements
+        System.out.println(cars);
+      
+      //method3 to print elements
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println(cars.get(i)+" ");
+        }
+        System.out.println("Number of elements: "+cars.size());
+
+        System.out.println();
+
+        cars.add(2, "Nano");
+        System.out.println("adding element at a specific index: "+cars);
+        System.out.println("Number of elements: "+cars.size());
+        System.out.println();
+
+        System.out.println("Getting element of specific index: "+cars.get(1));
+        System.out.println();
+
+        cars.set(0, "lamborghini");
+        System.out.println("Replacing element of specific index: "+cars);
+        Collections.sort(cars);
+        System.out.println("After sorting elements: "+cars);
+        System.out.println();
+
+        cars.remove(2);
+        System.out.println("removing element of specific index: "+cars);
+        System.out.println("Number of elements: "+cars.size());
+        System.out.println();
+
+        cars.clear();
+        System.out.println("After deleting all elements:"+cars);
+        System.out.println();
+
+        System.out.println("Number of elements: "+cars.size());
+    }
+}
